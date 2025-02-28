@@ -1,0 +1,132 @@
+Here’s how you can handle each of these tasks:
+
+
+---
+
+1. Local Git Initialization & Linking to GitHub
+
+You’ve created a new project folder and want to initialize it as a Git repository and link it to an existing GitHub repository.
+
+Steps:
+
+1. Navigate to the Project Folder:
+
+cd /path/to/your/project
+
+
+2. Initialize the Repository:
+
+git init
+
+
+3. Add the Remote GitHub Repository:
+
+git remote add origin <repository-URL>
+
+
+4. Verify the Remote Repository:
+
+git remote -v
+
+
+5. Add and Commit Files:
+
+git add .
+git commit -m "Initial commit"
+
+
+6. Push to GitHub:
+
+git push -u origin main
+
+(Replace main with master or another branch if needed.)
+
+
+
+
+---
+
+2. Git Pull and Merge Handling
+
+Your teammate has pushed changes, and you need to pull and merge them into your local branch.
+
+Steps:
+
+1. Ensure You Are on the Correct Branch:
+
+git checkout main
+
+
+2. Pull the Latest Changes:
+
+git pull origin main
+
+
+3. Handle Merge Conflicts (If Any):
+
+Git will notify you of conflicts in specific files.
+
+Open the conflicting files and manually resolve differences.
+
+After resolving conflicts, mark them as resolved:
+
+git add <file_name>
+
+Complete the merge with:
+
+git commit -m "Resolved merge conflicts"
+
+
+
+4. Push the Merged Changes (If Necessary):
+
+git push origin main
+
+
+
+
+---
+
+3. Jira Filter Creation
+
+You need to create a JQL filter to track all open issues assigned to your team.
+
+Steps:
+
+1. Navigate to Jira Advanced Search:
+
+Open Jira and go to Filters > Advanced Issue Search.
+
+
+
+2. Enter JQL Query:
+
+assignee in (currentUser()) AND status != Done ORDER BY created DESC
+
+(Modify currentUser() if you need a specific team, e.g., assignee in (user1, user2, user3).)
+
+
+3. Save the Filter:
+
+Click Save As and give it a name (e.g., "Team Open Issues").
+
+
+
+4. Share the Filter:
+
+Go to Filters > View all filters.
+
+Find your saved filter and click Details.
+
+Under Sharing, select the appropriate Group/Project and set visibility.
+
+
+
+5. Use the Filter in a Dashboard or Board:
+
+Use the saved filter in Jira boards, dashboards, or subscriptions.
+
+
+
+
+Would you like additional refinements on any of these topics?
