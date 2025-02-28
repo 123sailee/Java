@@ -20,4 +20,142 @@ labels = "Bug" AND created >= -7d
 assignee = currentUser() AND status != "Done"
 ```
 
-Let me know if you need modifications or further explanations!
+You said:
+You’ve identified a bug in the project. How would you create an issue in Jira,
+classify it under the appropriate epic, and assign it to a developer?
+8. A client has reported a critical issue. How would you create a Jira issue, set the
+priority to "High," and assign it to a developer?
+9. You want to track only high-priority issues in your project. How would you create
+a JQL filter and save it for future use?
+10.Your team wants to track all open issues assigned to them. How would you create
+a JQL filter and share it with the team?
+11.Your team is starting a new initiative that involves multiple stories and tasks. How
+would you create an epic in Jira and link relevant stories to it?
+12.A product owner has described a new feature. How would you create a Jira story
+with appropriate details and assign it to the development team?
+ChatGPT said:
+Here’s how you can handle these Jira tasks efficiently:
+
+7. Creating a Jira Issue for a Bug & Assigning It to a Developer
+Go to the Jira Project where the bug is identified.
+Click "Create" to open the issue creation window.
+Set the Issue Type to "Bug."
+Provide a detailed summary and description of the bug (steps to reproduce, expected vs actual behavior).
+Assign it to the appropriate epic (e.g., “Performance Improvements” if the bug is related to performance).
+Set the priority (e.g., "Medium" or "High" if it impacts production).
+Assign it to the relevant developer by selecting their name under the Assignee field.
+Click "Create" to log the issue.
+8. Creating a Critical Issue from a Client Report & Assigning It
+Click "Create" and select the correct project.
+Set Issue Type as "Bug" or "Incident" (depending on how your Jira is configured).
+Provide a clear summary and detailed description of the issue as reported by the client.
+Set the Priority to "High" or "Critical."
+Assign the issue to the developer/team responsible for fixing it.
+Add relevant labels (e.g., "client-reported," "urgent").
+Click "Create" to log the issue.
+9. Creating a JQL Filter for High-Priority Issues
+Go to the Jira Search Bar and click Advanced Search.
+Enter this JQL query:
+project = "YourProjectName" AND priority = High ORDER BY created DESC
+Click "Search" to verify the results.
+Click "Save as Filter", name it "High Priority Issues."
+(Optional) Share it with the team by clicking on "Details" > "Edit Permissions."
+10. Creating a JQL Filter for All Open Issues Assigned to the Team
+Go to Advanced Search and enter this JQL:
+project = "YourProjectName" AND status != Done AND assignee in (currentUser()) ORDER BY updated DESC
+Click "Search" to verify results.
+Click "Save as Filter" and name it "Open Issues - My Team."
+Share it with the team via "Details" > "Edit Permissions."
+11. Creating an Epic & Linking Relevant Stories
+Click "Create", and select "Epic" as the Issue Type.
+Enter an Epic Name and a clear description of the initiative.
+Click "Create."
+To link stories/tasks to the epic:
+Open the newly created Epic.
+Click "Create linked issue" > Choose Story or Task.
+Enter details and ensure the Epic Link field is set to the Epic you created.
+Click "Create."
+12. Creating a Jira Story for a New Feature
+Click "Create" and select "Story" as the Issue Type.
+Enter a clear summary (e.g., "Implement User Login Feature").
+Add a detailed description (Include user requirements, acceptance criteria, and business logic).
+Set the Priority (e.g., Medium/High).
+Assign the story to the development team or a specific developer.
+Link it to an Epic (if applicable).
+Click "Create."
+Let me know if you need any modifications! 🚀
+
+You said:
+13.Your Scrum team is preparing for a new sprint. How would you create a sprint in
+Jira and move backlog items into it?
+14.Your team has completed a sprint. How would you close the sprint in Jira and
+move incomplete tasks to the next sprint?15.Your team is expanding, and you need to onboard new members to Jira. How
+would you create user accounts and assign project roles within your Jira Cloud
+instance?
+16.You’re managing multiple projects and need a new one for a specific client. How
+would you set up a new Scrum project in Jira and configure permissions for the
+client?
+ChatGPT said:
+Here’s how you can efficiently manage these Jira tasks:
+
+13. Creating a Sprint & Moving Backlog Items in Jira
+Navigate to the Backlog of your Scrum project.
+Click "Create Sprint" at the top of the backlog.
+Give the sprint a name (e.g., "Sprint 5 - March Development").
+Set the start and end dates based on your sprint planning.
+Drag and drop backlog items (stories, tasks, and bugs) into the newly created sprint.
+Click "Start Sprint" to begin.
+14. Closing a Sprint & Moving Incomplete Tasks to the Next Sprint
+Navigate to Active Sprints in Jira.
+Click "Complete Sprint" at the top-right corner.
+A pop-up will show incomplete tasks.
+Choose whether to:
+Move them to the next sprint (if available).
+Move them back to the backlog for future prioritization.
+Click "Complete Sprint."
+15. Onboarding New Members & Assigning Project Roles in Jira Cloud
+Go to Jira Settings > User Management.
+Click "Invite Users" and enter their email addresses.
+Assign them to the correct Jira group (e.g., developers, testers, admins).
+Navigate to the project, go to Project Settings > People.
+Click "Add People" and assign them specific roles (e.g., Developer, Scrum Master).
+Send the invite, and once they accept, they’ll have access to the project.
+16. Setting Up a New Scrum Project for a Client & Configuring Permissions
+Go to Jira Home and click "Create Project."
+Select "Scrum Software Development" as the project type.
+Name the project (e.g., "Client ABC - Development").
+Set it as Team-managed or Company-managed (based on your needs).
+Go to Project Settings > Permissions.
+Click "Add People" and give the client the appropriate access level (e.g., Viewer, Reporter).
+Configure issue security levels to restrict access to sensitive tasks if needed.
+Let me know if you need further details! 🚀
+
+You said:
+17.Your manager asks you to find all Jira issues assigned to you with the status "In
+Progress." What JQL query would you use to find this information?
+18.You need to find all issues in the current sprint that are still open. What JQL query
+would you use to get this list?
+19.Your manager asks you to find all issues with the label “Bug” that were created in
+the last 7 days. What JQL query would you use to find these issues?
+20.Your team lead asks you to find all issues assigned to you, excluding those with
+the status "Done." What JQL query would you use?
+ChatGPT said:
+Here are the JQL queries for each scenario:
+
+17. Finding All Issues Assigned to You with Status "In Progress"
+assignee = currentUser() AND status = "In Progress"
+This query retrieves all issues assigned to you that are currently in progress.
+
+18. Finding All Open Issues in the Current Sprint
+sprint in openSprints() AND status != Done
+This will list all issues that are still open (not marked as "Done") in the active sprint.
+
+19. Finding All Issues with Label "Bug" Created in the Last 7 Days
+labels = Bug AND created >= -7d
+This retrieves all issues labeled "Bug" that were created in the past 7 days.
+
+20. Finding All Issues Assigned to You, Excluding "Done" Status
+assignee = currentUser() AND status != Done
+This query shows all tasks assigned to you, except those marked as "Done."
+
+Let me know if you need modifications! 🚀
