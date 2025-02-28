@@ -1,0 +1,49 @@
+### **1. Jira Filter Creation: Tracking Open Issues Assigned to the Team**  
+To create a JQL filter for tracking all open issues assigned to your team:  
+
+#### **Steps:**  
+1. Navigate to **Filters** > **Advanced Issue Search** in Jira.  
+2. Enter the JQL query:  
+   ```
+   assignee in (membersOf("team-group-name")) AND statusCategory != Done ORDER BY priority DESC
+   ```
+   - Replace `"team-group-name"` with your actual team’s group name.  
+   - The filter retrieves all issues assigned to your team that are not in a "Done" status.  
+3. Click **Search** to verify the results.  
+4. Click **Save As**, give it a name (e.g., "Team Open Issues"), and save the filter.  
+5. To share it, go to **Details** > **Edit Permissions** and share it with the appropriate team members or roles.  
+
+---
+
+### **2. Jira Kanban Board Configuration**  
+To configure a new Kanban board for your team:  
+
+#### **Steps:**  
+1. Go to **Jira Software** > **Boards** > **Create Board**.  
+2. Select **Kanban Board** and choose either:  
+   - **Create a new project** (if starting from scratch).  
+   - **Board from an existing project** (if using an existing one).  
+3. Select the project(s) to associate with the board and click **Create**.  
+4. To customize columns:  
+   - Go to **Board Settings** > **Columns**.  
+   - Rename, add, or remove columns based on the workflow (e.g., *To Do, In Progress, Review, Done*).  
+   - Drag statuses to their respective columns.  
+5. Adjust the **WIP (Work in Progress) Limits** under Board Settings to control workload.  
+
+---
+
+### **3. Jira Issue Creation: Logging a Critical Client Issue**  
+To create and assign a Jira issue with high priority:  
+
+#### **Steps:**  
+1. Click on **Create** in Jira.  
+2. Select the **Project** where the issue belongs.  
+3. Choose the **Issue Type** (e.g., *Bug* or *Task*).  
+4. Enter the **Summary** (e.g., "Client reports website downtime").  
+5. In **Description**, provide details about the issue.  
+6. Set **Priority** to **High**.  
+7. Assign the issue to a specific **Developer** from the team.  
+8. Add any necessary **Labels**, **Attachments**, or **Due Dates**.  
+9. Click **Create** to finalize the issue.  
+
+Would you like any additional configurations, like notifications or automation?
