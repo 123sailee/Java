@@ -1,0 +1,117 @@
+1. GitHub Repository Setup
+
+You need to create a repository, add a license file, and enable branch protection rules.
+
+Steps:
+
+1.1 Create a New Repository
+
+1. Log in to GitHub.
+
+
+2. Click on New Repository (+ sign in the top right > New repository).
+
+
+3. Enter a repository name, choose visibility (public/private), and check Initialize with a README (optional).
+
+
+4. Click Create repository.
+
+
+
+1.2 Add a License File
+
+1. Navigate to the repository.
+
+
+2. Click Add file > Create new file.
+
+
+3. Name the file LICENSE and choose a license from GitHub’s License Guide.
+
+
+4. Click Commit new file.
+
+
+
+1.3 Enable Branch Protection Rules
+
+1. Go to Settings > Branches.
+
+
+2. Under Branch protection rules, click Add rule.
+
+
+3. Enter main (or another branch name) in Branch name pattern.
+
+
+4. Enable:
+
+Require pull request reviews before merging
+
+Require status checks to pass before merging (optional)
+
+Restrict who can push to matching branches (if needed)
+
+
+
+5. Click Save changes.
+
+
+
+
+---
+
+2. Jira Sprint Creation
+
+Your team is preparing for a new sprint and moving backlog items into it.
+
+Steps:
+
+2.1 Create a Sprint in Jira
+
+1. Navigate to your Jira project.
+
+
+2. Click on the Backlog view.
+
+
+3. Click Create Sprint (above the backlog list).
+
+
+4. Name the sprint (e.g., Sprint 5 - March 2025), set Start & End Dates, and add a Goal.
+
+
+
+2.2 Move Backlog Items to the Sprint
+
+1. Drag and drop backlog items into the sprint.
+
+
+2. Ensure items have story points (if applicable).
+
+
+3. Click Start Sprint to begin.
+
+
+
+
+---
+
+3. Git Branch Creation
+
+You need to create a feature branch, switch to it, and push it to GitHub.
+
+Steps:
+
+3.1 Create and Switch to a New Branch
+
+git checkout -b feature-branch
+
+3.2 Push the New Branch to GitHub
+
+git push -u origin feature-branch
+
+Now, the branch is available on GitHub, and you can start working on your feature without affecting the main branch.
+
+Would you like additional details on any of these steps?
