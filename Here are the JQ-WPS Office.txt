@@ -1,0 +1,23 @@
+﻿Here are the JQL queries for each scenario:  
+
+**17. Find all Jira issues assigned to you with the status "In Progress":**  
+```JQL
+assignee = currentUser() AND status = "In Progress"
+```
+
+**18. Find all issues in the current sprint that are still open:**  
+```JQL
+sprint in openSprints() AND statusCategory != Done
+```
+
+**19. Find all issues with the label “Bug” that were created in the last 7 days:**  
+```JQL
+labels = "Bug" AND created >= -7d
+```
+
+**20. Find all issues assigned to you, excluding those with the status "Done":**  
+```JQL
+assignee = currentUser() AND status != "Done"
+```
+
+Let me know if you need modifications or further explanations!
