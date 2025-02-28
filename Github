@@ -1,0 +1,49 @@
+### 1. **Jira Cloud - Creating User Accounts & Assigning Project Roles**  
+To onboard new members to Jira Cloud and assign project roles:  
+
+#### **Step 1: Invite Users**  
+1. Go to **Jira Administration** → **User Management**.  
+2. Click on **Invite users** and enter their email addresses.  
+3. Assign them to appropriate groups (e.g., jira-software-users).  
+4. Click **Send invitation**.
+
+#### **Step 2: Assign Project Roles**  
+1. Navigate to **Jira Settings** → **Projects**.  
+2. Open the specific project and go to **Project settings** → **People**.  
+3. Click **Add people**, select the new users, and assign roles such as Developer, Tester, or Admin.  
+4. Click **Add** to confirm the role assignment.  
+
+---
+
+### 2. **Git Commit and Push**  
+If you have modified multiple files and want to stage, commit, and push them to GitHub:
+
+```sh
+# Navigate to your project directory
+cd /path/to/your/project
+
+# Stage all changes
+git add .
+
+# Commit the changes with a message
+git commit -m "Updated multiple files with necessary changes"
+
+# Push to the remote repository (main branch)
+git push origin main
+```
+
+*If you're using a different branch, replace `main` with the correct branch name.*
+
+---
+
+### 3. **JQL Query to Find Bugs Created in the Last 7 Days**  
+To find all Jira issues with the label **"Bug"** that were created in the last 7 days, use this JQL query:
+
+```jql
+project = "<Project_Name>" AND labels = Bug AND created >= -7d
+```
+
+- Replace `<Project_Name>` with the actual project name or key.
+- `created >= -7d` filters issues created in the last 7 days.
+
+Let me know if you need further details!
